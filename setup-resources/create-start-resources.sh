@@ -89,7 +89,7 @@ COSMOSDB_ACCOUNT_NAME=$(az cosmosdb list \
     --resource-group $RESOURCE_GROUP_NAME \
     --query [0].name -o tsv)
 
-printf "Get CosmosDB connection string \n"
+printf "Get CosmosDB connection string $COSMOSDB_ACCOUNT_NAME\n"
 
 COSMOSDB_CONNECTION_STRING=$(az cosmosdb keys list --type connection-strings \
   --name $COSMOSDB_ACCOUNT_NAME \
